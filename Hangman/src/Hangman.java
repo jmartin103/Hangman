@@ -83,14 +83,14 @@ public class Hangman {
 			if (misses == 5) {
 				System.out.println("You lose! The word I was thinking of was"
 						+ " \"" + word + "\"!");
-				break; // Terminate program
+				System.exit(0); // Terminate program
 			}
 			
 			// Player has successfully guessed the word
-			if (correctGuesses == wordLen) {
+			if ((correctGuesses == wordLen) && (misses < 5)) {
 				System.out.println(out); // Print word
 				System.out.println("Congrats! You win!");
-				break; // Terminate program
+				System.exit(0); // Terminate program
 			}
 		}
 	}
