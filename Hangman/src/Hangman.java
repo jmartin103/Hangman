@@ -60,7 +60,7 @@ public class Hangman {
 			/* Scan through the randomly generated word, and if the guessed 
 			 * letter matches any character in the word, change the asterisk 
 			 * in the out array to the guessed letter, according to its 
-			 * position, an then set guessed value to true. 
+			 * position, and then set guessed value to true. 
 			 */
 			for (int i = 0; i < wordLen; i++) {
 				// User guessed a correct letter
