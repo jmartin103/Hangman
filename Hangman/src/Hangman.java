@@ -65,16 +65,14 @@ public class Hangman {
 			for (int i = 0; i < wordLen; i++) {
 				// User guessed a correct letter
 				if (guessedLetter == word.charAt(i) && out[i] == '*') {
+					System.out.println("Good! Keep going!");
 					out[i] = word.charAt(i);
 					guessed = true;
+					correctGuesses++;
 				}	
 			}
-			
-			if (guessed) {
-				System.out.println("Good! Keep going!");
-				correctGuesses++; // Increment the number of correct guesses
-			}
-			else { // Player guessed incorrectly, increment number of misses
+
+			if (!guessed) { // Player guessed incorrectly, increment number of misses
 				System.out.println("Sorry, wrong letter!");
 				misses++;
 			}
@@ -87,7 +85,7 @@ public class Hangman {
 			}
 			
 			// Player has successfully guessed the word
-			if ((correctGuesses == wordLen) && (misses < 5)) {
+			if (correctGuesses == wordLen) {
 				System.out.println(out); // Print word
 				System.out.println("Congrats! You win!");
 				System.exit(0); // Terminate program
