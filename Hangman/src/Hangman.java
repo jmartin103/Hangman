@@ -20,7 +20,14 @@ public class Hangman {
 			"book", "magazine", "party", "recreation", "park", "hike", "always", 
 			"grill", "chicken", "beef", "pork", "gasoline", "hotel", "highway", 
 			"visual", "professor", "physics", "airport", "expose", "solution", 
-			"problem", "mayor", "mozzarella", "blizzard", "jawbreaker"
+			"problem", "mayor", "mozzarella", "blizzard", "jawbreaker", "voice", 
+			"matrix", "child", "data", "jail", "restaurant", "wind", "military", 
+			"passport", "elementary", "difficult", "concert", "target", "tone", 
+			"dress", "salad", "heaven", "breathe", "hero", "minute", "orange", 
+			"green", "blue", "purple", "white", "fire", "police", "grocery", 
+			"steel", "grass", "hill", "shirt", "boat", "sleep", "flute", "rope", 
+			"wish", "marry", "black", "better", "cold", "mountain", "money", 
+			"economy", "ready", "cherish", "dream", "crayon", "milk", "paint"
 	};
 	
 	public static void main(String[] args) {
