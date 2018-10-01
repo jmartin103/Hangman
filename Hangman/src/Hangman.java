@@ -65,7 +65,6 @@ public class Hangman {
 			for (int i = 0; i < wordLen; i++) {
 				// User guessed a correct letter
 				if (guessedLetter == word.charAt(i) && out[i] == '*') {
-					System.out.println("Good! Keep going!");
 					out[i] = word.charAt(i);
 					guessed = true;
 					correctGuesses++;
