@@ -48,6 +48,8 @@ public class Hangman {
 			out[i] = '*';
 		}
 		
+		Vector<Character> guessedLetters = new Vector<Character>();
+		
 		/* Have user guess letters for the word generated. If the player 
 		 * guesses correctly, increment the number of correct guesses. The
 		 * game ends either when the player successfully guesses the word, or
@@ -62,7 +64,11 @@ public class Hangman {
 			
 			System.out.print("Guess a letter: "); // Prompt user for a letter
 			char guessedLetter = sc.next().charAt(0); // Scan letter in scanner
-			boolean guessed = false; // Initialize guessed to false
+			boolean guessed = false;
+			
+			if (guessedLetters.contains(guessedLetter)) {
+				System.out.println("Invalid guess: You already guessed this letter. Try again.");
+			}
 			
 			/* Scan through the randomly generated word, and if the guessed 
 			 * letter matches any character in the word, change the asterisk 
@@ -75,12 +81,14 @@ public class Hangman {
 					out[i] = word.charAt(i);
 					guessed = true;
 					correctGuesses++;
+					guessedLetters.add(guessedLetter);
 				}	
 			}
 
 			if (!guessed) { // Player guessed incorrectly, increment number of misses
 				System.out.println("Sorry, wrong letter!");
 				misses++;
+				guessedLetters.add(guessedLetter);
 			}
 			
 			// Player has reached five misses; display correct word and terminate
